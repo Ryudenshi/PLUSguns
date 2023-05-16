@@ -1,0 +1,51 @@
+
+body{
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    min-width: 320px;
+    overflow-x: hidden;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+.navbar .container{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentSpace{
+    background-color: lightyellow;
+    height: 100%;
+    width: 100%;
+}
+
+.navbarMenu{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.navbarMenu li, .navbarMenu li a{
+    display: inline-block;
+} 
+.navbarWrap{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.lol{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border: 1px solid black;
+}

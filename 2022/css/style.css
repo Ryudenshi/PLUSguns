@@ -1,0 +1,675 @@
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  min-width: 320px;
+  overflow-x: hidden;
+  height: auto;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: black;
+}
+
+.navbar .container {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contentSpace {
+  background-color: rgb(241, 241, 235);
+  height: 100%;
+  width: 60%;
+  max-width: 60%;
+  padding: 50px 20px;
+  margin: 0 auto;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+.navbarMenu {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.navbarMenu li, .navbarMenu li a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navbarMenu li a{
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px 10px 0px 10px;
+  border-radius: 10%;
+  background-color: white;
+  padding: 7px 10px 7px 10px;
+  justify-content: center;
+
+}
+
+.navbarMenu li:hover, .navbarMenu li a:hover{
+  color: white;
+  background-color: black;
+}
+
+.navbarWrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.navbarLogo{
+  width: 60px;
+}
+
+.navbarBrand{
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 6px 0px 0px 20px;
+  position: absolute;
+}
+
+.navbarBrand:hover{
+  color: white;
+}
+
+.searchBox{
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 40px;
+}
+
+.searchBTN{
+  color: white;
+  margin-left: 4px;
+  padding: 12px 15px 12px 15px;
+  border-radius: 50%;
+  background-color: black;
+  text-decoration: none;
+}
+
+.searchText{
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.searchBTN:hover{
+  color: black;
+  background-color: #fff;
+}
+
+.logDiv{
+  position: absolute;
+  right: 30px;
+}
+
+.login{
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px 0px 0px 10px;
+  border-radius: 10%;
+  background-color: white;
+  padding: 7px 10px 7px 10px;
+}
+
+.login:hover{
+  color: white;
+  background-color: black;
+}
+
+
+.contentList{
+  margin: 10px 15px 10px 0px;
+  display: inline-block;
+  position: absolute;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 0;
+}
+
+.contentTitles li{
+  margin: 10px 0px 10px 0px;
+}
+
+.contentTitles li a{
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 10%;
+  justify-content: center;
+  padding: 3px 10px 3px 10px;
+  width: 300px;
+  text-decoration: none;
+  margin: 0px 20px 20px 0px;
+}
+
+.contentTitles li i{
+  margin-right: auto;
+}
+
+.contentTitles li a:hover{
+  color: white;
+}
+
+.footer{
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  margin-bottom: auto;
+  padding: 20;
+  overflow: 2;
+}
+
+.weaponBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 250px;
+  margin-left: 100px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  z-index: 2;
+}
+
+.weaponItems:hover .weaponBox{
+  visibility: visible;
+  opacity: 1;
+}
+
+.airsoftBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 330px;
+  margin-left: 100px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  z-index: 2;
+}
+
+.airsoftItems:hover .airsoftBox{
+  visibility: visible;
+  opacity: 1;
+}
+
+.bowBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 330px;
+  margin-left: 100px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  z-index: 2;
+}
+
+.bowItems:hover .bowBox{
+  visibility: visible;
+  opacity: 1;
+}
+.crossbowBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 330px;
+  margin-left: 100px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  z-index: 2;
+}
+
+.crossbowItems:hover .crossbowBox{
+  visibility: visible;
+  opacity: 1;
+}
+
+.opticBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 330px;
+  margin-left: 100px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  z-index: 2;
+}
+
+.opticItems:hover .opticBox{
+  visibility: visible;
+  opacity: 1;
+}
+
+.selfDefenceBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 300px;
+  margin-left: 100px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  z-index: 2;
+}
+
+.selfDefenceItems:hover .selfDefenceBox{
+  visibility: visible;
+  opacity: 1;
+}
+
+.tacticalEquipmentBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 300px;
+  margin-left: 100px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  z-index: 2;
+}
+
+.tacticalEquipmentItems:hover .tacticalEquipmentBox{
+  visibility: visible;
+  opacity: 1;
+}
+
+.huntingEquipmentBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 300px;
+  margin-left: 100px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(241, 241, 235);
+  border: 3px solid black;
+  z-index: 2;
+}
+
+.huntingEquipmentItems:hover .huntingEquipmentBox{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*.slick-slider{}*/
+
+.slick-list{
+  overflow: hidden;
+}
+
+.slick-track{
+  display: flex;
+  align-items: flex-start;
+}
+
+/*.slick-slide{}*/
+
+/*.slick-slide.slick-active{}*/
+
+/*.slick-slide.slick-current{}*/
+
+/*.slick-slide.slick-center{}*/
+
+/*.slick-arrow{}*/
+
+/*.slick-arrow.slick-prev{}*/
+
+/*.slick-arrow.slick-next{}*/
+
+/*.slick-arrow.slick-disabled{}*/
+
+/*.slick-dots{}
+.slick-dots li{}
+.slick-dots button{}*/
+
+.slider{
+  position: relative;
+  padding: 0px 40px;
+  height: 325px;
+  width: 915px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.slider .slick-arrow{
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  font-size: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+}
+
+.slider .slick-arrow.slick-prev{
+  left: 0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.slider .slick-arrow.slick-next{
+  right: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.slider .slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slick-dots li{
+  list-style: none;
+}
+.slider .slick-dots button{
+  font-size: 0;
+  border-radius: 100px;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  margin: 0px 5px;
+  border-color: black;
+}
+
+.slider .slick-dots li.slick-active button{
+  background-color: black;
+  border-color: white;
+}
+
+.assaultRifleItemSlide, .airsoftGunItemSlide, .bowItemSlide, .crossbowItemSlide, .opticsItemSlide, .selfDefenceItemSlide, .tacticalEquipmentItemSlide, .huntingEquipmentItemSlide{
+  width: 100%;
+  height: 400px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border: 3px solid black;
+}
+.sliderItem{
+  text-align: center;
+}
+
+.slideTextWhite{
+  position: absolute;
+  opacity: 3;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: rgb(240, 240, 240);
+  font-weight: 700;
+  font-size: 40px;
+  text-shadow: 3px 3px black;
+}
+.slideTextBlack{
+  position: absolute;
+  opacity: 3;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: black;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.subContent{
+  margin-top: 120px;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subContentText{
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 6px;
+}
+.subContentBox{
+  margin: 10px 30px;
+  background-color: rgb(248, 248, 248);
+  justify-content: left;
+  width: 500px;
+  line-height: 1.4;
+  display: flex;
+  border: 3px solid black;
+  padding: 15px;
+}
+
+.subContentBox i{
+  margin: 6px 10px 0px 5px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.line{
+  display: flex;
+  border: 3px solid gray;
+  margin: 60px 0px;
+}
+
+.contentPage{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.contentLine{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.newContent{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.weaponName{
+  border-bottom: 1px solid black;
+}
+
+.newContentList{
+  display: flex;
+  align-items: center;
+}
+
+.newContentItem{
+  margin: 10px 20px;
+  height: 350px;
+  width: 220px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.weaponContentItem{
+  margin: 10px 10px;
+  height: 350px;
+  width: 220px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.bestContentImageBox{
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgb(76, 153, 45);
+  position: absolute;
+  right: 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 70px;
+  background-color: rgb(247, 247, 247);
+}
+
+.newContentImageBox{
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgb(253, 235, 131);
+  position: absolute;
+  right: 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 70px;
+  background-color: rgb(247, 247, 247);
+}
+
+.bestContentText{
+  font-weight: 700;
+  font-size: 100px;
+  position: relative;
+  color: rgb(76, 153, 45);
+}
+
+.newContentText{
+  font-weight: 700;
+  font-size: 100px;
+  position: relative;
+  color: rgb(253, 235, 131);
+}
+
+.newContentItem{
+  justify-content: center;
+}
+
+.newContentItemImage{
+  width: 190px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.priceTag{
+  position: relative;
+  font-weight: 700px;
+  font-size: 20px;
+  color: black;
+  background-color: rgb(158, 158, 158);
+  margin: 30px 20px 5px 20px;
+  justify-content: center;
+  display: flex;
+}
+
+.functions{
+  justify-content: space-between;
+  display: inline-block;
+}
+
+.likeFunction{
+  justify-content: center;
+  margin: 0px 20px 40px 0px;
+  font-size: 22px;
+  border: 2px solid rgb(255, 148, 133);
+  color: rgb(255, 148, 133);
+}
+
+.buyFunction{
+  justify-content: center;
+  margin: 0px 15px 40px 20px;
+  font-size: 22px;
+  border: 2px solid green;
+  color: green;
+}
+
+.bestImage{
+  z-index: 3;
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  height: 130px;
+  width: 130px;
+}
+
+.sparkleImage{
+  z-index: 3;
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  height: 150px;
+  width: 150px;
+}
+
+.loginBG{
+  margin: 0;
+  background-image: linear-gradient(rgba(189, 189, 189, 0.3),rgba(58, 58, 58, 0.3));
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.loginForm{
+  width: 400px;
+  max-width: 400px;
+  margin: 18px;
+  padding: 36px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: black;
+  justify-content: center;
+}
+
+.loginForm, .formInput, .formButtom{
+  font: 400 18px 'Quicksand', sans-serif;
+}
+
+.loginForm h1{
+  font: 700 'Quicksand' sans-serif;
+  color: white;
+}
+
+.formImputGroup .formInput{
+  height: 40px;
+  align-items: center;
+}
+
+.formImputGroup:hover{
+  border-style: none;
+}
+
+.formButton{
+  margin: 10px 0px;
+  height: 50px;
+  width: 220px;
+  background-color: #fff;
+  border-radius: 100px;
+}

@@ -1,0 +1,104 @@
+.plusL{
+    color: #FFEB82;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+}
+.gunsL{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 300;
+}
+.navigationBar{
+    left: 0;
+    color: white;
+}
+.logoFirstPart{
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: 700;
+    opacity: 0.4;
+    color: #fff;
+}
+.logoSecondPart{
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: 700;
+    opacity: 1;
+    color: #FFEB82;
+}
+.logoThirdPart{
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: 700;
+    opacity: 0.4;
+    color: #fff;
+}
+.basenav:hover{
+    color: #FFEB82;
+}
+.active{
+    background-color: #fff;
+}
+.mainbg{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://images.everydayhealth.com/images/firearms-top-cause-of-childhood-deaths-1440x810.jpg?sfvrsn=bf0775f7_1);
+}
+.navButton{
+    background-color: #fff;
+    color: black;
+    font-weight: 700;
+    border-color: #fff;
+    margin: 0px 5px;
+    border-radius: 20;
+}
+.navButton:hover{
+    background-color: black;
+    color: #FFEB82;
+    font-weight: 700;
+    border-color: #FFEB82;
+}
+.footerCol{
+    background-color: white;
+}
+.footerContainer{
+    border: 2px solid black;
+    width: 100%;
+    margin-top: 10px;
+}
+.footnav{
+    color: #FFF;
+}
+.footnav:hover{
+    color: #FFEB82
+}
+.footnav:checked{
+    text-decoration: none;
+}
+.footnavRev{
+    text-decoration: none;
+    color: #FFEB82
+}
+.footnavRev:hover{
+    color: #FFF;
+}
+.footlogo{
+    writing-mode: vertical-rl;
+    font-size: 50px;
+    transform: rotate(180deg);
+    color: #FFEB82
+}
+.plusLfoot{
+    color: #FFF;
+}
+.footer{
+    background-color: #fff;
+    height: 2px;
+    width: 60%;
+    margin-left: 0;
+    margin-top: 10px;
+}

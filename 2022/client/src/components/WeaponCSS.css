@@ -1,0 +1,14 @@
+.weaponCard:hover{
+    border-color: darkkhaki;
+}
+.typeStyle:hover{
+    background-color: lightgray;
+    color: darkkhaki;
+}
+.typeStyle:checked{
+    background-color: lightgray;
+}
+.brandStyle:hover{
+    background-color: lightgray;
+    color: darkkhaki;
+}

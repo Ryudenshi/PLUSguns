@@ -59,3 +59,14 @@
     background-size: cover;
     background-position: center;
 }
+
+.comments{
+    background: #ffffff;
+    color: #000;
+    border: none;
+}
+.comments:hover{
+    background: #ffffff;
+    color: #000;
+    border: 1px solid black;
+}

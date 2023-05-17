@@ -44,25 +44,24 @@ const WeaponPage = () => {
                     <Row>
                         <Card className="mb-2 mt-4">
                             <h1 className="mb-3 p-3">Information</h1>
-                            <nav className="sidebar">
-                                <div className="weaponInfo-scrollBox" style={{
-                                    overflowY: "auto",
-                                    maxHeight: "200px",
-                                    overflowX: "hidden",
-                                }}>
-                                    {weapons.info.map((info, index) => (
-                                        <Row
-                                            key={info.id}
-                                            style={{
-                                                background: index % 2 === 0 ? "lightgray" : "transparent",
-                                                padding: 10,
-                                            }}
-                                        >
-                                            {info.title}: {info.description}
-                                        </Row>
-                                    ))}
-                                </div>
-                            </nav>
+                            <div
+                                className="weaponInfo-scrollBox"
+                                style={{
+                                    overflowY: 'auto',
+                                    maxHeight: '200px',
+                                    overflowX: 'hidden',
+                                }}
+                            >
+                                {weapons.info.map((info, index) => (
+                                    <Row
+                                        key={info.id}
+                                        className={index % 2 === 0 ? 'bg-light' : ''}
+                                        style={{ padding: 10 }}
+                                    >
+                                        {info.title}: {info.description}
+                                    </Row>
+                                ))}
+                            </div>
                         </Card>
                     </Row>
                     <Row>
@@ -104,15 +103,21 @@ const WeaponPage = () => {
                 <Col md={6}>
                     <Row>
                         <Col md={6} >
-                            <Card>
-                                <Form className="d-flex flex-column align-items-center">
-                                    <div
-                                        className="d-flex align-items-center justify-content-center"
-                                        style={{ background: `url(${BigRatingStar}) no-repeat center center`, width: 300, height: 300, backgroundSize: 'cover', fontSize: 40 }}
-                                    >
-                                        {weapons.rating}
-                                    </div>
-                                </Form>
+                            <Card style={{ height: 300, width: 300 }}>
+                                <div
+                                    className="d-flex align-items-center justify-content-center"
+                                    style={{
+                                        backgroundImage: `url(${BigRatingStar})`,
+                                        backgroundRepeat: "no-repeat",
+                                        backgroundPosition: "center center",
+                                        backgroundSize: "100% 100%",
+                                        width: "100%",
+                                        height: "100%",
+                                        fontSize: 40,
+                                    }}
+                                >
+                                    {weapons.rating}
+                                </div>
                             </Card>
                         </Col>
                         <Col md={5} >
@@ -133,11 +138,110 @@ const WeaponPage = () => {
                             </Card>
                         </Col>
                     </Row>
-                    <Row className='mt-3'>
+                    <Row className='mt-3 justify-content-center' style={{ width: 755 }}>
                         <Col md={12}>
-                            <Card className="d-flex flex-column justify-content-around">
+                            <Card className='p-4'>
                                 <Row>
-                                    <Row className='d-flex justify-content-center m-2'><h3>What people says about this product</h3></Row>
+                                    <Row className='justify-content-center mb-3'><h3>What people says about this product</h3></Row>
+                                    <hr className='' style={{ width: 750 }} />
+                                </Row>
+                                <Row>
+                                    <Col md={2}>
+                                        <h5 className='mt-2'>Sort by</h5>
+                                    </Col>
+                                    <Col md={3}>
+                                        <div className='border p-2' style={{ height: 40 }}><p>Most recent</p></div>
+                                    </Col>
+                                </Row>
+                                <Row className='border mt-3'>
+                                    <Col>
+                                        <Row>
+                                            <Col md={2}>
+                                                <Row style={{ width: 80 }} className='mt-2'>
+                                                    <Image className='m-1' height={50} src='https://cdn-icons-png.flaticon.com/512/552/552721.png' />
+                                                </Row>
+                                            </Col>
+                                            <Col md={3}>
+                                                <Row>
+                                                    <h4>User 1</h4>
+                                                </Row>
+                                                <Row>
+                                                    <p className='gray'>Apr 3 2023</p>
+                                                </Row>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda.</p>
+                                        </Row>
+                                        <Row>
+                                            <Col md={2}>
+                                                <Button className=' comments m-2' style={{ height: 32, width: 100 }}><h6>Like</h6></Button>
+                                            </Col>
+                                            <Col>
+                                                <Button className=' comments m-2' style={{ height: 32, width: 100 }}><h6>Reply</h6></Button>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                                <Row className='border mt-3'>
+                                    <Col>
+                                        <Row>
+                                            <Col md={2}>
+                                                <Row style={{ width: 80 }} className='mt-2'>
+                                                    <Image className='m-1' height={50} src='https://cdn-icons-png.flaticon.com/512/552/552721.png' />
+                                                </Row>
+                                            </Col>
+                                            <Col md={3}>
+                                                <Row>
+                                                    <h4>User 2</h4>
+                                                </Row>
+                                                <Row>
+                                                    <p className='gray'>Apr 3 2023</p>
+                                                </Row>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda.</p>
+                                        </Row>
+                                        <Row>
+                                            <Col md={2}>
+                                                <Button className=' comments m-2' style={{ height: 32, width: 100 }}><h6>Like</h6></Button>
+                                            </Col>
+                                            <Col>
+                                                <Button className=' comments m-2' style={{ height: 32, width: 100 }}><h6>Reply</h6></Button>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                                <Row className='border mt-3'>
+                                    <Col>
+                                        <Row>
+                                            <Col md={2}>
+                                                <Row style={{ width: 80 }} className='mt-2'>
+                                                    <Image className='m-1' height={50} src='https://cdn-icons-png.flaticon.com/512/552/552721.png' />
+                                                </Row>
+                                            </Col>
+                                            <Col md={3}>
+                                                <Row>
+                                                    <h4>User 3</h4>
+                                                </Row>
+                                                <Row>
+                                                    <p className='gray'>Apr 3 2023</p>
+                                                </Row>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda.</p>
+                                        </Row>
+                                        <Row>
+                                            <Col md={2}>
+                                                <Button className=' comments m-2' style={{ height: 32, width: 100 }}><h6>Like</h6></Button>
+                                            </Col>
+                                            <Col>
+                                                <Button className=' comments m-2' style={{ height: 32, width: 100 }}><h6>Reply</h6></Button>
+                                            </Col>
+                                        </Row>
+                                    </Col>
                                 </Row>
                             </Card>
                         </Col>

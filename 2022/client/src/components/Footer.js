@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import {Container, Col, Row, Nav } from "react-bootstrap";
 import './NavBar.css';
 import { MAIN_ROUTE, SHOP_ROUTE } from "../utils/const";
 import { NavLink, useNavigate } from "react-router-dom";
+import FAQ from "./modals/FAQ";
 
 
 const Footer = () => {
 
     const history = useNavigate()
+    const [FAQModalVisible, setFAQVisible] = useState(false);
 
     return (
         <footer className="text-white bg-dark mt-4">
@@ -36,7 +38,8 @@ const Footer = () => {
                             <Nav.Link className="mt-1 footnav" onClick={() => history(MAIN_ROUTE)}>Home</Nav.Link>
                             <Nav.Link className="mt-1 footnav" onClick={() => history(SHOP_ROUTE)}>Shop</Nav.Link>
                             <Nav.Link className="mt-1 footnav">Blog</Nav.Link>
-                            <Nav.Link className="mt-1 footnav">Contact</Nav.Link>
+                            <Nav.Link className="mt-1 footnav" onClick={() => setFAQVisible(true)}>FAQ</Nav.Link>
+                            <FAQ show={FAQModalVisible} onHide={() => setFAQVisible(false)} />
                         </Nav>
                     </Col>
                 </Row>

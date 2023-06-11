@@ -65,7 +65,7 @@ const Basket = observer(() => {
                     </Card>
                     <hr />
                     <div className='d-flex flex-row justify-content-between align-items-center'>
-                        <Button variant="success" onClick={delFromBasket}>Confirm purchase</Button>
+                        <Button variant="success">Confirm purchase</Button>
                         <Button variant="outline-danger" onClick={delFromBasket}>Clear All</Button>
                     </div>
                 </Col>
